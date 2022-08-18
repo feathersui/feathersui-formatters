@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="feathersui-formatters" package="feathers.rpc" version="1.0.0" company="Bowler Hat LLC" />
+	<app main="openfl.display.Sprite" path="bin" file="feathersui-formatters" />
+	
+	<source path="src" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+
+	<haxeflag name="--macro" value="include('feathers.formatters')"/>
+
+	<template path="templates" if="flash"/>
+
+	<section if="flash">
+		<source path="build_macros/flash"/>
+		<haxeflag name="--macro" value="AddFlashPropertyMeta.find('feathers.formatters')"/>
+	</section>
+
+	<section if="find_missing_docs">
+		<source path="build_macros/docs"/>
+		<haxeflag name="--macro" value="FindMissingDocs.find('feathers.formatters')"/>
+	</section>
+</project>

@@ -1,0 +1,14 @@
+{
+  "name": "feathersui-formatters",
+  "url": "https://feathersui.com/",
+  "license": "Apache",
+  "tags": ["openfl", "feathersui", "formatters", "formatting"],
+  "description": "String formatting for Feathers UI",
+  "version": "1.0.0-alpha.1",
+  "classPath": "src",
+  "dependencies": {
+    "openfl": ""
+  },
+  "contributors": ["bowlerhat"],
+  "releasenote": "Initial release"
+}
