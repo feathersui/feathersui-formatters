@@ -354,7 +354,8 @@ class NumberFormatter extends Formatter {
 			return "";
 		}
 
-		if (decimalSeparatorTo == "" || !Math.isNaN(Std.parseFloat(decimalSeparatorTo))) {
+		// some versions of HL incorrectly parse "." as 0
+		if (#if hl decimalSeparatorTo != "." && #end (decimalSeparatorTo == "" || !Math.isNaN(Std.parseFloat(decimalSeparatorTo)))) {
 			error = Formatter.defaultInvalidFormatError;
 			return "";
 		}
