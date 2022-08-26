@@ -13,9 +13,8 @@ Includes the following formatters:
 
 ## Minimum Requirements
 
-- Haxe 4.2
-- OpenFL 9.2
-- Feathers UI 1.0
+- Haxe 4.0
+- OpenFL 8.9.7
 
 ## Installation
 
