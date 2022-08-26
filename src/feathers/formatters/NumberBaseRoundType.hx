@@ -25,7 +25,7 @@ package feathers.formatters;
 	@see `feathers.formatters.NumberFormatter`
 	@see `feathers.formatters.NumberBase`
 **/
-final class NumberBaseRoundType {
+@:enum abstract NumberBaseRoundType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
@@ -36,21 +36,21 @@ final class NumberBaseRoundType {
 		Rounds a number down to an integer that is both closest to, 
 		and less than or equal to, the input number.
 	**/
-	public static final DOWN:String = "down";
+	public var DOWN = "down";
 
 	/**
 		Rounds a number up or down to the nearest integer.
 	**/
-	public static final NEAREST:String = "nearest";
+	public var NEAREST = "nearest";
 
 	/**
 		Perform no rounding.
 	**/
-	public static final NONE:String = "none";
+	public var NONE = "none";
 
 	/**
 		Rounds a number up to an integer value that is both closest to, 
 		and greater than or equal to, the input number.
 	**/
-	public static final UP:String = "up";
+	public var UP = "up";
 }
