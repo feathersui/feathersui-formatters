@@ -18,10 +18,10 @@ Includes the following formatters:
 
 ## Installation
 
-This library is not yet available on Haxelib, so you'll need to install it from Github.
+Run the following command in a terminal to install [feathersui-formatters](https://lib.haxe.org/p/feathersui-formatters) from Haxelib.
 
 ```sh
-haxelib git feathersui-formatters https://github.com/feathersui/feathersui-formatters.git
+haxelib install feathersui-formatters
 ```
 
 ## Project Configuration
