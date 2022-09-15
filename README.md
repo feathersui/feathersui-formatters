@@ -8,7 +8,6 @@ Includes the following formatters:
 - [`DateFormatter`](https://api.feathersui.com/formatters/current/feathers/formatters/DateFormatter.html)
 - [`NumberFormatter`](https://api.feathersui.com/formatters/current/feathers/formatters/NumberFormatter.html)
 - [`PhoneFormatter`](https://api.feathersui.com/formatters/current/feathers/formatters/PhoneFormatter.html)
-- [`StringFormatter`](https://api.feathersui.com/formatters/current/feathers/formatters/StringFormatter.html)
 - [`ZipCodeFormatter`](https://api.feathersui.com/formatters/current/feathers/formatters/ZipCodeFormatter.html)
 
 ## Minimum Requirements
