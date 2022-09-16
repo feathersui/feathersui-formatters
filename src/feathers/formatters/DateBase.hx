@@ -20,14 +20,14 @@ package feathers.formatters;
 import feathers.formatters.StringFormatter.PatternInfo;
 
 /**
- *  The DateBase class contains the localized string information
- *  used by the feathers.formatters.DateFormatter class and the parsing function
- *  that renders the pattern.
- *  This is a helper class for the DateFormatter class that is not usually
- *  used independently.
- *
- *  @see `feathers.formatters.DateFormatter`
- */
+	The DateBase class contains the localized string information
+	used by the feathers.formatters.DateFormatter class and the parsing function
+	that renders the pattern.
+	This is a helper class for the DateFormatter class that is not usually
+	used independently.
+
+	@see `feathers.formatters.DateFormatter`
+**/
 class DateBase {
 	//--------------------------------------------------------------------------
 	//
@@ -49,11 +49,11 @@ class DateBase {
 	private static var dayNamesLongOverride:Array<String>;
 
 	/**
-	 *  Long format of day names.
-	 * 
-	 *  @default ["Sunday", "Monday", "Tuesday", "Wednesday",
-	 *  "Thursday", "Friday", "Saturday"]
-	 */
+		Long format of day names.
+
+		@default ["Sunday", "Monday", "Tuesday", "Wednesday",
+		"Thursday", "Friday", "Saturday"]
+	**/
 	public static var dayNamesLong(get, set):Array<String>;
 
 	private static function get_dayNamesLong():Array<String> {
@@ -77,10 +77,10 @@ class DateBase {
 	private static var dayNamesShortOverride:Array<String>;
 
 	/**
-	 *  Short format of day names.
-	 * 
-	 *  @default ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-	 */
+		Short format of day names.
+
+		@default ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+	**/
 	public static var dayNamesShort(get, set):Array<String>;
 
 	private static function get_dayNamesShort():Array<String> {
@@ -115,11 +115,11 @@ class DateBase {
 	private static var monthNamesLongOverride:Array<String>;
 
 	/**
-	 *  Long format of month names.
-	 *
-	 *  @default ["January", "February", "March", "April", "May", "June", 
-	 *  "July", "August", "September", "October", "November", "December"]
-	 */
+		Long format of month names.
+
+		@default ["January", "February", "March", "April", "May", "June", 
+		"July", "August", "September", "October", "November", "December"]
+	**/
 	public static var monthNamesLong(get, set):Array<String>;
 
 	private static function get_monthNamesLong():Array<String> {
@@ -145,11 +145,11 @@ class DateBase {
 	private static var monthNamesShortOverride:Array<String>;
 
 	/**
-	 *  Short format of month names.
-	 *
-	 *  @default ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-	 *  "Jul", "Aug", "Sep", "Oct","Nov", "Dec"]
-	 */
+		Short format of month names.
+
+		@default ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+		"Jul", "Aug", "Sep", "Oct","Nov", "Dec"]
+	**/
 	public static var monthNamesShort(get, set):Array<String>;
 
 	private static function get_monthNamesShort():Array<String> {
@@ -175,10 +175,10 @@ class DateBase {
 	private static var timeOfDayOverride:Array<String>;
 
 	/**
-	 *  Time of day names.
-	 * 
-	 *  @default ["AM", "PM"]
-	 */
+		Time of day names.
+
+		@default ["AM", "PM"]
+	**/
 	public static var timeOfDay(get, set):Array<String>;
 
 	private static function get_timeOfDay():Array<String> {
@@ -197,10 +197,10 @@ class DateBase {
 	private static var _timezoneName:String = "GMT";
 
 	/**
-	 *  Timezone name.
-	 * 
-	 *  @default "GMT"
-	 */
+		Timezone name.
+
+		@default "GMT"
+	**/
 	public static var timezoneName(get, set):String;
 
 	private static function get_timezoneName():String {
@@ -215,10 +215,10 @@ class DateBase {
 	private static var _timezoneHourMinuteSeperator:String = ":";
 
 	/**
-	 *  Timezone hour/minute seperator.
-	 * 
-	 *  @default ":"
-	 */
+		Timezone hour/minute seperator.
+
+		@default ":"
+	**/
 	public static var timezoneHourMinuteSeperator(get, set):String;
 
 	private static function get_timezoneHourMinuteSeperator():String {
@@ -253,15 +253,15 @@ class DateBase {
 	}
 
 	/**
-	 *  Parses token objects and renders the elements of the formatted String.
-	 *  For details about token objects, see StringFormatter.
-	 *
-	 *  @param date Date object.
-	 *
-	 *  @param tokenInfo Array object that contains token object descriptions.
-	 *
-	 *  @return Formatted string.
-	 */
+		Parses token objects and renders the elements of the formatted String.
+		For details about token objects, see StringFormatter.
+
+		@param date Date object.
+
+		@param tokenInfo Array object that contains token object descriptions.
+
+		@return Formatted string.
+	**/
 	private static function extractTokenDate(date:Date, tokenInfo:PatternInfo):String {
 		initialize();
 
@@ -433,14 +433,14 @@ class DateBase {
 	}
 
 	/**
-	 *  Makes a given length of digits longer by padding with zeroes.
-	 *
-	 *  @param value Value to pad.
-	 *
-	 *  @param key Length of the string to pad.
-	 *
-	 *  @return Formatted string.
-	 */
+		Makes a given length of digits longer by padding with zeroes.
+
+		@param value Value to pad.
+
+		@param key Length of the string to pad.
+
+		@return Formatted string.
+	**/
 	private static function setValue(value:Dynamic, key:Int):String {
 		var result:String = "";
 

@@ -18,51 +18,26 @@
 package feathers.formatters;
 
 /**
- *  The CurrencyFormatter class formats a valid number as a currency value.
- *  It adjusts the decimal rounding and precision, the thousands separator, 
- *  and the negative sign; it also adds a currency symbol.
- *  You place the currency symbol on either the left or the right side
- *  of the value with the <code>alignSymbol</code> property.
- *  The currency symbol can contain multiple characters,
- *  including blank spaces.
- *  
- *  <p>If an error occurs, an empty String is returned and a String that describes 
- *  the error is saved to the <code>error</code> property. The <code>error</code> 
- *  property can have one of the following values:</p>
- *
- *  <ul>
- *    <li><code>"Invalid value"</code> means an invalid numeric value is passed to 
- *    the <code>format()</code> method. The value should be a valid number in the 
- *    form of a Number or a String.</li>
- *    <li><code>"Invalid format"</code> means one of the parameters contains an unusable setting.</li>
- *  </ul>
- *  
- *  @mxml
- *  
- *  <p>The <code>&lt;mx:CurrencyFormatter&gt;</code> tag
- *  inherits all of the tag attributes of its superclass,
- *  and adds the following tag attributes:</p>
- *  
- *  <pre>
- *  &lt;mx:CurrencyFormatter
- *    alignSymbol="left|right" 
- *    currencySymbol="$"
- *    decimalSeparatorFrom="."
- *    decimalSeparatorTo="."
- *    precision="-1"
- *    rounding="none|up|down|nearest"
- *    thousandsSeparatorFrom=","
- *    thousandsSeparatorTo=","
- *    useNegativeSign="true|false"
- *    useThousandsSeparator="true|false"
- *	/>  
- *  </pre>
- *  
- *  @includeExample examples/CurrencyFormatterExample.mxml
- *  
- *  @see `feathers.formatters.NumberBase`
- *  @see `feathers.formatters.NumberBaseRoundType`
- */
+	The CurrencyFormatter class formats a valid number as a currency value.
+	It adjusts the decimal rounding and precision, the thousands separator, 
+	and the negative sign; it also adds a currency symbol.
+	You place the currency symbol on either the left or the right side
+	of the value with the `alignSymbol` property.
+	The currency symbol can contain multiple characters,
+	including blank spaces.
+
+	If an error occurs, an empty String is returned and a String that describes 
+	the error is saved to the `error` property. The `error` 
+	property can have one of the following values:
+
+	- `"Invalid value"` means an invalid numeric value is passed to 
+	the `format()` method. The value should be a valid number in the 
+	form of a Number or a String.
+	- `"Invalid format"` means one of the parameters contains an unusable setting.
+
+	@see `feathers.formatters.NumberBase`
+	@see `feathers.formatters.NumberBaseRoundType`
+**/
 class CurrencyFormatter extends Formatter {
 	//--------------------------------------------------------------------------
 	//
@@ -71,7 +46,7 @@ class CurrencyFormatter extends Formatter {
 	//--------------------------------------------------------------------------
 
 	/**
-	 *  Constructor.
+		Constructor.
 	 */
 	public function new() {
 		super();
@@ -92,14 +67,14 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Aligns currency symbol to the left side or the right side
-	 *  of the formatted number.
-	 *  Permitted values are <code>"left"</code> and <code>"right"</code>.
-	 *
-	 *  @default feathers.formatters.CurrencyFormatterAlignSymbol.LEFT
-	 *
-	 *  @see `feathers.formatters.CurrencyFormatterAlignSymbol`
-	 */
+		Aligns currency symbol to the left side or the right side
+		of the formatted number.
+		Permitted values are `"left"` and `"right"`.
+
+		@default feathers.formatters.CurrencyFormatterAlignSymbol.LEFT
+
+		@see `feathers.formatters.CurrencyFormatterAlignSymbol`
+	**/
 	public var alignSymbol(get, set):String;
 
 	private function get_alignSymbol():String {
@@ -123,16 +98,16 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Character to use as a currency symbol for a formatted number.
-	 *  You can use one or more characters to represent the currency 
-	 *  symbol; for example, "$" or "YEN".
-	 *  You can also use empty spaces to add space between the 
-	 *  currency character and the formatted number.
-	 *  When the number is a negative value, the currency symbol
-	 *  appears between the number and the minus sign or parentheses.
-	 *
-	 *  @default "$"
-	 */
+		Character to use as a currency symbol for a formatted number.
+		You can use one or more characters to represent the currency 
+		symbol; for example, "$" or "YEN".
+		You can also use empty spaces to add space between the 
+		currency character and the formatted number.
+		When the number is a negative value, the currency symbol
+		appears between the number and the minus sign or parentheses.
+
+		@default "$"
+	**/
 	public var currencySymbol(get, set):String;
 
 	private function get_currencySymbol():String {
@@ -156,11 +131,11 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Decimal separator character to use
-	 *  when parsing an input string.
-	 *
-	 *  @default "."
-	 */
+		Decimal separator character to use
+		when parsing an input string.
+
+		@default "."
+	**/
 	public var decimalSeparatorFrom(get, set):String;
 
 	private function get_decimalSeparatorFrom():String {
@@ -184,11 +159,11 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Decimal separator character to use
-	 *  when outputting formatted decimal numbers.
-	 *
-	 *  @default "."
-	 */
+		Decimal separator character to use
+		when outputting formatted decimal numbers.
+
+		@default "."
+	**/
 	public var decimalSeparatorTo(get, set):String;
 
 	private function get_decimalSeparatorTo():String {
@@ -212,16 +187,16 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Number of decimal places to include in the output String.
-	 *  You can disable precision by setting it to <code>-1</code>.
-	 *  A value of <code>-1</code> means do not change the precision. For example, 
-	 *  if the input value is 1.453 and <code>rounding</code> 
-	 *  is set to <code>NumberBaseRoundType.NONE</code>, return 1.453.
-	 *  If <code>precision</code> is -1 and you set some form of 
-	 *  rounding, return a value based on that rounding type.
-	 *
-	 *  @default -1
-	 */
+		Number of decimal places to include in the output String.
+		You can disable precision by setting it to `-1`.
+		A value of `-1` means do not change the precision. For example, 
+		if the input value is 1.453 and `rounding` 
+		is set to `NumberBaseRoundType.NONE`, return 1.453.
+		If `precision` is -1 and you set some form of 
+		rounding, return a value based on that rounding type.
+
+		@default -1
+	**/
 	public var precision(get, set):Int;
 
 	private function get_precision():Int {
@@ -245,19 +220,19 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", enumeration="none,up,down,nearest", defaultValue="null")]
 
 	/**
-	 *  Specifies how to round the number.
-	 * 
-	 *  In Haxe, you can use the following constants to set this property: 
-	 * 
-	 *  - <code>NumberBaseRoundType.NONE</code>,
-	 *  - <code>NumberBaseRoundType.UP</code>
-	 *  - <code>NumberBaseRoundType.DOWN</code>
-	 *  - <code>NumberBaseRoundType.NEAREST</code>
-	 *
-	 *  @default NumberBaseRoundType.NONE
-	 *
-	 *  @see `feathers.formatters.NumberBaseRoundType`
-	 */
+		Specifies how to round the number.
+
+		In Haxe, you can use the following constants to set this property: 
+
+		- `NumberBaseRoundType.NONE`,
+		- `NumberBaseRoundType.UP`
+		- `NumberBaseRoundType.DOWN`
+		- `NumberBaseRoundType.NEAREST`
+
+		@default NumberBaseRoundType.NONE
+
+		@see `feathers.formatters.NumberBaseRoundType`
+	**/
 	public var rounding(get, set):String;
 
 	private function get_rounding():String {
@@ -281,11 +256,11 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Character to use as the thousands separator
-	 *  in the input String.
-	 *
-	 *  @default ","
-	 */
+		Character to use as the thousands separator
+		in the input String.
+
+		@default ","
+	**/
 	public var thousandsSeparatorFrom(get, set):String;
 
 	private function get_thousandsSeparatorFrom():String {
@@ -309,11 +284,11 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  Character to use as the thousands separator
-	 *  in the output string.
-	 *
-	 *  @default ","
-	 */
+		Character to use as the thousands separator
+		in the output string.
+
+		@default ","
+	**/
 	public var thousandsSeparatorTo(get, set):String;
 
 	private function get_thousandsSeparatorTo():String {
@@ -337,13 +312,13 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  If <code>true</code>, format a negative number 
-	 *  by preceding it with a minus "-" sign.
-	 *  If <code>false</code>, format the number
-	 *  surrounded by parentheses, for example (400).
-	 *
-	 *  @default true
-	 */
+		If `true`, format a negative number 
+		by preceding it with a minus "-" sign.
+		If `false`, format the number
+		surrounded by parentheses, for example (400).
+
+		@default true
+	**/
 	public var useNegativeSign(get, set):Bool;
 
 	private function get_useNegativeSign():Bool {
@@ -367,11 +342,11 @@ class CurrencyFormatter extends Formatter {
 	// [Inspectable(category="General", defaultValue="null")]
 
 	/**
-	 *  If <code>true</code>, split the number into thousands increments
-	 *  by using a separator character.
-	 *
-	 *  @default true
-	 */
+		If `true`, split the number into thousands increments
+		by using a separator character.
+
+		@default true
+	**/
 	public var useThousandsSeparator(get, set):Bool;
 
 	private function get_useThousandsSeparator():Bool {
@@ -407,14 +382,14 @@ class CurrencyFormatter extends Formatter {
 	}
 
 	/**
-	 *  Formats <code>value</code> as currency.
-	 *  If <code>value</code> cannot be formatted, return an empty String 
-	 *  and write a description of the error to the <code>error</code> property.
-	 *
-	 *  @param value Value to format.
-	 *
-	 *  @return Formatted string. Empty if an error occurs.
-	 */
+		Formats `value` as currency.
+		If `value` cannot be formatted, return an empty String 
+		and write a description of the error to the `error` property.
+
+		@param value Value to format.
+
+		@return Formatted string. Empty if an error occurs.
+	**/
 	override public function format(value:Dynamic):String {
 		// Reset any previous errors.
 		if (error != null) {
