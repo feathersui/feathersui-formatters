@@ -102,11 +102,12 @@ class SwitchSymbolFormatter {
 
 		var uStrIndx:Int = 0;
 
+		var sourceStr = Std.string(source);
 		var n:Int = format.length;
 		for (i in 0...n) {
 			var letter:String = format.charAt(i);
 			if (letter == numberSymbol) {
-				numStr += Std.string(source).charAt(uStrIndx++);
+				numStr += sourceStr.charAt(uStrIndx++);
 			} else {
 				numStr += format.charAt(i);
 			}
