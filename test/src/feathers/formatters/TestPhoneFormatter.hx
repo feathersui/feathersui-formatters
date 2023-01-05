@@ -14,8 +14,13 @@ class TestPhoneFormatter extends Test {
 		_formatter = null;
 	}
 
-	public function testDefaults():Void {
+	public function testDefaultsString():Void {
 		var result = _formatter.format("1234567890");
+		Assert.equals("(123) 456-7890", result);
+	}
+
+	public function testDefaultsInteger():Void {
+		var result = _formatter.format(1234567890);
 		Assert.equals("(123) 456-7890", result);
 	}
 }

@@ -14,8 +14,13 @@ class TestZipCodeFormatter extends Test {
 		_formatter = null;
 	}
 
-	public function testDefaults():Void {
+	public function testDefaultsString():Void {
 		var result = _formatter.format("12345");
+		Assert.equals("12345", result);
+	}
+
+	public function testDefaultsInteger():Void {
+		var result = _formatter.format(12345);
 		Assert.equals("12345", result);
 	}
 }
