@@ -4,11 +4,11 @@
   "license": "Apache",
   "tags": ["openfl", "feathersui", "formatters", "formatting"],
   "description": "String formatting for Feathers UI",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "classPath": "src",
   "dependencies": {
     "openfl": ""
   },
   "contributors": ["bowlerhat"],
-  "releasenote": "Initial release"
+  "releasenote": "Fixed CurrencyFormatter exception with non-string types, improved DateFormatter performance"
 }

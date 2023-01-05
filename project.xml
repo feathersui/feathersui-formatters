@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="feathersui-formatters" package="feathers.rpc" version="1.0.0" company="Bowler Hat LLC" />
+	<meta title="feathersui-formatters" package="feathers.formatters" version="1.0.0" company="Bowler Hat LLC" />
 	<app main="openfl.display.Sprite" path="bin" file="feathersui-formatters" />
 	
 	<source path="src" />
