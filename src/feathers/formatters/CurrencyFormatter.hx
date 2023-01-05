@@ -429,7 +429,7 @@ class CurrencyFormatter extends Formatter {
 			}
 		}
 
-		if (value == null || Math.isNaN(Std.parseFloat(value))) {
+		if (value == null || Math.isNaN(Std.parseFloat(Std.string(value)))) {
 			error = Formatter.defaultInvalidValueError;
 			return "";
 		}
