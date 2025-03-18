@@ -25,7 +25,7 @@ package feathers.formatters;
 
 	@see `feathers.formatters.CurrencyFormatter`
 **/
-@:enum abstract CurrencyFormatterAlignSymbol(String) from String to String {
+#if haxe4 enum #else @:enum #end abstract CurrencyFormatterAlignSymbol(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants

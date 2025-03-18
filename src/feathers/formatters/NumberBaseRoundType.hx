@@ -25,7 +25,7 @@ package feathers.formatters;
 	@see `feathers.formatters.NumberFormatter`
 	@see `feathers.formatters.NumberBase`
 **/
-@:enum abstract NumberBaseRoundType(String) from String to String {
+#if haxe4 enum #else @:enum #end abstract NumberBaseRoundType(String) from String to String {
 	//--------------------------------------------------------------------------
 	//
 	//  Class constants
